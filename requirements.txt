@@ -1,6 +1,0 @@
-Flask
-Flask-SQLAlchemy
-Flask-Mail
-Flask-Login
-pdfkit
-gunicorn

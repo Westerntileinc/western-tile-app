@@ -7,9 +7,12 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+@app.before_request
+def ensure_tables_exist():
+    if not hasattr(app, '_tables_created'):
+        with app.app_context():
+            db.create_all()
+            app._tables_created = True
 
 @app.route("/", methods=["GET", "POST"])
 def home():

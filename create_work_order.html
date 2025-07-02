@@ -5,20 +5,35 @@
 </head>
 <body>
     <h1>Create Work Order</h1>
-    <form method="POST">
-        <input name="customer_name" placeholder="Customer Name"><br>
-        <input name="company" placeholder="Company"><br>
-        <input name="job_number" placeholder="Job Number"><br>
-        <input name="contract_number" placeholder="Contract Number"><br>
-        <input name="install_date" placeholder="Install Date"><br>
-        <input name="installer" placeholder="Installer"><br>
-        <input name="sales_person" placeholder="Sales Person"><br>
-        <textarea name="labor_description" placeholder="Labor Description"></textarea><br>
-        <textarea name="product_description" placeholder="Product Description"></textarea><br>
-        <input name="labor_cost" placeholder="Labor Cost"><br>
-        <input name="material_cost" placeholder="Material Cost"><br>
-        <textarea name="notes" placeholder="Notes"></textarea><br>
-        <button type="submit">Submit</button>
+    <form action="/create" method="post">
+        <label for="customer">Customer Name:</label><br>
+        <input type="text" id="customer" name="customer"><br><br>
+
+        <label for="address">Job Address:</label><br>
+        <input type="text" id="address" name="address"><br><br>
+
+        <label for="job_type">Job Type:</label><br>
+        <input type="text" id="job_type" name="job_type"><br><br>
+
+        <label for="material">Material:</label><br>
+        <input type="text" id="material" name="material"><br><br>
+
+        <label for="edge">Edge Profile:</label><br>
+        <input type="text" id="edge" name="edge"><br><br>
+
+        <label for="splash">Splash:</label><br>
+        <input type="text" id="splash" name="splash"><br><br>
+
+        <label for="sink">Sink Info:</label><br>
+        <input type="text" id="sink" name="sink"><br><br>
+
+        <label for="cooktop">Cooktop Info:</label><br>
+        <input type="text" id="cooktop" name="cooktop"><br><br>
+
+        <label for="notes">Notes:</label><br>
+        <textarea id="notes" name="notes"></textarea><br><br>
+
+        <input type="submit" value="Create Work Order">
     </form>
 </body>
 </html>

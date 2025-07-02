@@ -1,6 +1,0 @@
-flask
-flask_sqlalchemy
-flask_mail
-flask_login
-pdfkit
-gunicorn
